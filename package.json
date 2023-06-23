@@ -1,0 +1,31 @@
+{
+  "name": "express-sequelize-g24",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": "./bin/cli.js",
+  "scripts": {
+    "start": "node src/server",
+    "dev": "nodemon src/server",
+    "test": "jest --detectOpenHandles",
+    "migrate:reset": "node ./src/tests/test_migrate.js",
+    "pretest": "npm run migrate:reset"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.29.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
+  }
+}
